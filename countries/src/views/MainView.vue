@@ -10,14 +10,14 @@ const loading = ref(false);
 const displayCountries = ref();
 
 const filterCountries = (region: string) => {
-  displayCountries.value = countries.filter((e) => e.region === region).slice(0, 20);
+  displayCountries.value = countries.filter((e: any) => e.region === region).slice(0, 20);
 }
 
 const filterBySearch = (search: string) => {
   if (search.trim() === '') {
     displayCountries.value = countries.slice(0, 20);
   }
-  displayCountries.value = countries.filter(e => { return e.name.official.toLowerCase().startsWith(search.toLowerCase()) }).slice(0, 20);
+  displayCountries.value = countries.filter((e: any) => { return e.name.official.toLowerCase().startsWith(search.toLowerCase()) }).slice(0, 20);
 
 }
 

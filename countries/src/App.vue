@@ -5,7 +5,7 @@ import Header from './components/Header.vue'
 
 <template>
   <Header></Header>
-  <RouterView v-slot="{Component}" :key="$route.params">
+  <RouterView v-slot="{Component}" :key="$route.params+''">
 
     <Suspense>
       <component :is="Component" />

@@ -21,7 +21,7 @@ function toggleTheme() {
 onMounted(() => {
   const activeTheme = localStorage.getItem("user-theme");
 
-  setTheme(activeTheme);
+  setTheme(activeTheme + '');
 })
 </script>
 

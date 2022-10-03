@@ -6,9 +6,9 @@ const props = defineProps({
 })
 const selectedOption = ref('');
 
-const setOption = (e) => {
+const setOption = (e: any) => {
   selectedOption.value = e.target.value;
-  props.filter(selectedOption.value);
+  props.filter?.(selectedOption.value);
 }
 
 

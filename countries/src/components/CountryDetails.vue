@@ -21,7 +21,7 @@ const getCountry = async () => {
     const json = await response.json();
     data.value = json[0];
   }
-  catch (e) {
+  catch (e: any) {
     error.value = e;
   }
   finally {
@@ -42,7 +42,7 @@ await getCountry();
 
 
 <template>
-  <main class="main" :key="countryName">
+  <main class="main" :key="countryName+''">
     <p v-if="error">{{error}} while loading {{countryName}}</p>
     <router-link to="/" class="back-button"><img src="@/assets/arrow-left-solid.svg" width="32" height="32"
         alt="go back icon" />

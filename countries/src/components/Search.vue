@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps(['filter']);
 
-const search = (e) => {
+const search = (e: any) => {
   props.filter(e.target.value)
 }
 </script>
